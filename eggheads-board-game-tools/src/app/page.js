@@ -1,4 +1,6 @@
 import Navbar from '../Components/Navbar'
+import Header from '../Components/Header'
+import Footer from '../Components/Footer'
 
 
 // TO DOs:
@@ -28,6 +30,8 @@ export default function Home() {
   return (
     <main className='w-screen h-screen bg-blue-700'>
       <Navbar/>
+      <Header/>
+      <Footer/>
     </main>
   )
 }
