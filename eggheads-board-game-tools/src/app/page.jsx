@@ -28,7 +28,7 @@ import Footer from '../Components/Footer'
 //    Be able to upload your image of a terrain piece...Comes back with where to buy similar terrain pieces
 export default function Home() {
   return (
-    <main className='w-screen h-screen bg-blue-700'>
+    <main>
       <Navbar/>
       <Header/>
       <Footer/>
