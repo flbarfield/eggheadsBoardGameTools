@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Navbar = () => {
     return (
-        <nav>
+        <nav className='position:absolute'> 
             <div>
                 <ul className="flex justify-between p-3 items-center font-medium mx-auto max-w-4xl">
                     <li>
