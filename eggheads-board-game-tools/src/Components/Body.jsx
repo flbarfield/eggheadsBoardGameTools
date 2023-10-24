@@ -2,9 +2,9 @@ import Image from 'next/image'
 import gameWall from '../../public/images/boardGameWall.png'
 
 
-const Header = () => {
+const Body = () => {
     return (
-        <header className='flex flex-col mt-12 gap-10 px-30 sm:px-0 md:px-50 lg:px-40 lg:flex-row lg:gap-0'>
+        <section className='flex flex-col mt-12 gap-10 px-30 sm:px-0 md:px-20 lg:px-10 lg:flex-row lg:gap-0 xl:px-40'>
             <section className='flex flex-col gap-2 lg:basis-1/2'>
                 <div className='flex flex-col px-12 gap-5'>
                     <h1 className='text-4xl text-EggheadBlue text-center sm:text-left'>EggHead's Board Game Tools</h1>
@@ -15,9 +15,8 @@ const Header = () => {
             <section className='flex px-12 lg:basis-1/2'>
                 <Image className='rounded-md mx-auto' src={gameWall} width={800} alt="Egghead Logo" />
             </section>
-            
-        </header>
+        </section>
     )
 }
 
-export default Header
+export default Body
