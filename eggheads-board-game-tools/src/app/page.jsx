@@ -1,7 +1,5 @@
-import Navbar from '../Components/Navbar'
 import Body from '../Components/Body'
 import Footer from '../Components/Footer'
-import Head from '../Components/Head'
 
 
 // TO DOs:
@@ -31,8 +29,6 @@ import Head from '../Components/Head'
 export default function Home() {
   return (
     <main>
-      <Head/>
-      <Navbar/>
       <Body/>
       <Footer/>
     </main>
