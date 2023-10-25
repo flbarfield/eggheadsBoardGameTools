@@ -1,35 +1,25 @@
-import Body from '../Components/Body'
+import gameWall from '../../public/Images/boardGameWall.png'
 import Footer from '../Components/Footer'
-
-
-// TO DOs:
-
-// ---- TTRPG Section ----
-//    Quick References
-//      Status Affects
-//    Monster Creator
-//    Battle Section
-//      Initiative/turn tracker
-//    Character Creator
-//    Name Generators for towns/cities/characters
-//    DM Randomizors
-//      Shops
-//      Loot
-//      Wild Magic Surge
-//      Random Encounters
-//      Quick Maps
-//
-// ---- Board Game Section ----
-//    Add your current BGs to a list to see what you have
-//      Randomly can choose one if players can't choose what to play
-//
-// ---- Miniature Section ----
-//    Be able to upload your image of a terrain piece...Comes back with where to buy similar terrain pieces
+import Image from 'next/image'
 
 export default function Home() {
   return (
     <main>
-      <Body/>
+       <section className='flex flex-col mt-12 gap-10 px-30 sm:px-0 md:px-20 lg:px-10 lg:flex-row lg:gap-0 xl:px-40'>
+            <section className='flex flex-col gap-2 lg:basis-1/2'>
+                <div className='flex flex-col px-12 gap-5 lg:justify-center'>
+                    <h1 className='text-4xl text-EggheadBlue text-center sm:text-left'>EggHead's Board Game Tools</h1>
+                    <span className='text-lg'>The one stop shop for all your game-aid needs!</span>
+                    <p className='mt-5'>From boardgame collectors to tabletop RPG dungeon masters, welcome to "EggHead's Board Game Tools"! As lovers of the analog-gaming community, we know how important it is in this day and age to have a regular communal space where you can gather your loved ones around a table and share grand adventures with one another! But we've come to realize that games can often be bogged down with a large number of things to keep track of during game time.<br/><br/>That's why we hope to bring you a wide variety of tools to make your games more fun and seamless! And over all, more accessible to every-day non-gamers that are intimidated by the busy work of tracking money and victory points or can't keep their character sheets straight!</p>
+                </div>
+            </section>
+            <section className='flex px-12 lg:basis-1/2'>
+                <Image className='rounded-md mx-auto' src={gameWall} width={800} height={500} placeholder='blur' alt="Egghead Logo" />
+            </section>
+        </section>
+        <section>
+          <h1>Recent Updates:</h1>
+        </section>
       <Footer/>
     </main>
   )
