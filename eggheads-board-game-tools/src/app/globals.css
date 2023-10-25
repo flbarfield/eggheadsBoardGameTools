@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* base styles */
+h1, h2 {
+    @apply text-4xl text-EggheadBlue text-center sm:text-left;
+}
+
+h2 {
+    @apply text-2xl
+}
+
+span {
+    @apply text-lg;
+}
