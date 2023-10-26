@@ -1,6 +1,7 @@
 import gameWall from '../../public/Images/boardGameWall.png'
 import Footer from '../Components/Footer'
 import Image from 'next/image'
+import TextPill from '../Components/TextPill'
 
 export default function Home() {
   return (
@@ -17,8 +18,11 @@ export default function Home() {
                 <Image className='rounded-md mx-auto' src={gameWall} width={800} height={500} placeholder='blur' alt="Egghead Logo" />
             </section>
         </section>
-        <section>
-          <h2>Recent Updates:</h2>
+        <h2 className='my-10 text-center'>Recent Updates:</h2>
+        <section className='pt-5 flex flex-col md:flex-row md:flex-wrap'>
+          <TextPill/>
+          <TextPill/>
+          <TextPill/>
         </section>
       <Footer/>
     </main>

@@ -1,5 +1,21 @@
 export default function Footer () {
-    <footer>
-        
-    </footer>
+    return (
+        <footer className="bg-EggheadBlue mt-10 py-10 text-white">
+                <section className="flex flex-col text-center gap-2">
+                    <label className='text-2xl' htmlfor='email'>Subscribe for updates!</label>
+                    <form action="">
+                        <input type="text" placeholder="Email:" name="email"/>
+                        <button className="ml-5">Submit</button>
+                    </form>
+                </section>
+                <section className="mt-5 text-center">
+                    <span className="">Follow Us:</span>
+                    <ul className="flex justify-center gap-5">
+                        <li><a className="cursor-pointer" href="#">Twitter</a></li>
+                        <li><a className="cursor-pointer" href="#">Instagram</a></li>
+                        <li><a className="cursor-pointer" href="#">Facebook</a></li>
+                    </ul>
+                 </section>
+        </footer>
+    )
 }
