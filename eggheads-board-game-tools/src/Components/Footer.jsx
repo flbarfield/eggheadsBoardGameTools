@@ -2,7 +2,7 @@ export default function Footer () {
     return (
         <footer className="bg-EggheadBlue mt-10 py-10 text-white">
                 <section className="flex flex-col text-center gap-2">
-                    <label className='text-2xl' htmlfor='email'>Subscribe for updates!</label>
+                    <label className='text-2xl' htmlFor='email'>Subscribe for updates!</label>
                     <form action="">
                         <input type="text" placeholder="Email:" name="email"/>
                         <button className="ml-5">Submit</button>

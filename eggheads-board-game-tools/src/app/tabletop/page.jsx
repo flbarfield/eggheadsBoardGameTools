@@ -17,7 +17,10 @@
 export default function TableTop() {
     return (
         <main>
-            <h1>Table Top Games</h1>
+            <section className="flex flex-col text-center">
+                <h1>Table Top Games</h1>
+                <li><a href="#">Game Master's Tools</a></li>
+            </section>
         </main>
         
     )
