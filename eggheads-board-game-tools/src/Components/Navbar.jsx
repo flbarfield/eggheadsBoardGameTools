@@ -15,13 +15,34 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link className='hover:bg-EggheadBlue hover:text-white p-2 rounded-md' href="/tabletop">Table Top Roleplay</Link>
+                        <span className='hover:bg-EggheadBlue hover:text-white p-2 rounded-md cursor-pointer relative'>Table Top Roleplay</span>
+                        <ul className='hidden shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
+                            <li>
+                                <Link  href="/tabletop">Table Top Roleplay</Link>
+                            </li>
+                            <li>
+                                <Link href='/'>
+                                    Test
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href='/'>
+                                    Test
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href='/'>
+                                    Test
+                                </Link>
+                            </li>
+                        </ul>
+                        
                     </li>
                     <li>
-                        <Link className='hover:bg-EggheadBlue hover:text-white p-2 rounded-md' href="/boardgames">Board Games</Link>
+                        <Link className='hover:bg-EggheadBlue hover:text-white line-through p-2 rounded-md' href="/boardgames">Board Games</Link>
                     </li>
                     <li>
-                        <Link className='hover:bg-EggheadBlue hover:text-white p-2 rounded-md' href="/miniatures">Miniatures</Link>
+                        <Link className='hover:bg-EggheadBlue hover:text-white p-2 rounded-md line-through' href="/miniatures">Miniatures</Link>
                     </li>
                 </ul>
             </div>
