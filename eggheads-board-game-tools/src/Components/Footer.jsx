@@ -1,3 +1,6 @@
+import Button from "./Button";
+
+
 export default function Footer () {
     return (
         <footer className="bg-EggheadBlue py-10 text-white mt-auto">
@@ -5,7 +8,7 @@ export default function Footer () {
                     <label className='text-2xl' htmlFor='email'>Subscribe for updates!</label>
                     <form action="">
                         <input type="text" placeholder="Email:" name="email"/>
-                        <button className="ml-5">Submit</button>
+                        <Button label='Submit'/>
                     </form>
                 </section>
                 <section className="mt-5 text-center">

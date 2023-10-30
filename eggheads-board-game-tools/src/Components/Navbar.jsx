@@ -11,11 +11,6 @@ const Navbar = () => {
         e.target.nextElementSibling.classList.toggle('hidden')
     }
 
-    // function toggleLinksFromUL(e) {
-    //     alert(e.target)
-    //     // e.target.classList.toggle('hidden')
-    // }
-
     return (
         <nav> 
             <div>
