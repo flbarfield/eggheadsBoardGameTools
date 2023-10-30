@@ -1,3 +1,6 @@
+//Name Generators for 
+//  player characters
+
 export default function NameGenerators () {
     return (
         <main>

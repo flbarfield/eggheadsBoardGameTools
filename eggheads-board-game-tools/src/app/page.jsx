@@ -1,5 +1,4 @@
 import gameWall from '../../public/Images/boardGameWall.png'
-import Footer from '../Components/Footer'
 import Image from 'next/image'
 import TextPill from '../Components/TextPill'
 
@@ -24,7 +23,6 @@ export default function Home() {
           <TextPill/>
           <TextPill/>
         </section>
-      <Footer/>
     </main>
   )
 }

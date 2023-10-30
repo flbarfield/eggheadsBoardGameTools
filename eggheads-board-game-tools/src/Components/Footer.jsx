@@ -1,6 +1,6 @@
 export default function Footer () {
     return (
-        <footer className="bg-EggheadBlue mt-10 py-10 text-white">
+        <footer className="bg-EggheadBlue py-10 text-white mt-auto">
                 <section className="flex flex-col text-center gap-2">
                     <label className='text-2xl' htmlFor='email'>Subscribe for updates!</label>
                     <form action="">

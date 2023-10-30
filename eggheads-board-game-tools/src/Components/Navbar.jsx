@@ -31,8 +31,8 @@ const Navbar = () => {
                         <span onClick={toggleNavLinks} className='hover:bg-EggheadBlue hover:text-white p-2 rounded-md cursor-pointer'>Table Top Roleplay</span>
                         <ul className='shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden absolute'>
                             <NavbarLink path='/tabletop/DMsTools' linkName='DMs Tools'/>
-                            <NavbarLink path='/tabletop/playersCorner' linkName="Player's Corner"/>
-                            <NavbarLink path='/tabletop/nameGenerators' linkName='Name Generators'/>
+                            <NavbarLink path='/tabletop/playersCorner' linkName="Player's Corner (not yet implemented)"/>
+                            <NavbarLink path='/tabletop/nameGenerators' linkName='Name Generators (not yet implemented)'/>
                         </ul>
                     </li>
                     <li>

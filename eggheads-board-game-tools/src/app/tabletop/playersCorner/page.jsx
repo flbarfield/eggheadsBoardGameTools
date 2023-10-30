@@ -1,3 +1,8 @@
+//    Character Creator
+//    Quick References
+//      Status Affects
+
+
 export default function PlayersCorner () {
     return (
         <main>
