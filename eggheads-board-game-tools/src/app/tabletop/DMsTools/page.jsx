@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useState } from 'react'
 
 import DMImage from '../../../../public/Images/Dungeon-Master.webp'
 import Button from '@/Components/Button'
@@ -23,7 +24,12 @@ import Button from '@/Components/Button'
 //      NPCs
 
 export default function DMsTools () {
-
+    // const [activeSelection, setActiveSelection] = useState(0)
+    
+    // alert(document.getElementById('dmContent').lastChild())
+    // if (!document.getElementById('id').value) {
+    //     alert('aint nothing here!')
+    // }
 
     return (
         <main>
@@ -49,7 +55,7 @@ export default function DMsTools () {
                     </section>
                 </div>
             </section>
-            <section className='flex px-12 lg:basis-1/2 mb-10'>
+            <section id='dmContent' className='flex px-12 lg:basis-1/2 mb-10'>
                 <Image className='rounded-md mx-auto' src={DMImage} width={800} height={500} placeholder='blur' alt="Image of a Dungeon Master" />
             </section>
         </section>

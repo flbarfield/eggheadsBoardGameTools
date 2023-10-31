@@ -14,9 +14,9 @@ export default function Footer () {
                 <section className="mt-5 text-center">
                     <span className="">Follow Us:</span>
                     <ul className="flex justify-center gap-5">
-                        <li><a className="cursor-pointer" href="#">Twitter</a></li>
-                        <li><a className="cursor-pointer" href="#">Instagram</a></li>
-                        <li><a className="cursor-pointer" href="#">Facebook</a></li>
+                        <li><a className="cursor-pointer fa-brands fa-twitter hover:text-blue-500" href="#"></a></li>
+                        <li><a className="cursor-pointer fa-brands fa-instagram hover:text-blue-500" href="#"></a></li>
+                        <li><a className="cursor-pointer fa-brands fa-facebook hover:text-blue-500" href="#"></a></li>
                     </ul>
                  </section>
         </footer>
