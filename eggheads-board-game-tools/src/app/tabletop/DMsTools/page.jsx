@@ -4,6 +4,15 @@ import Image from 'next/image'
 import { useState, useRef } from 'react'
 
 import DMImage from '../../../../public/Images/Dungeon-Master.webp'
+import CombatImg from '../../../../public/Images/Combat.jpeg'
+import AfflictionsImg from '../../../../public/Images/afflictions.jpeg'
+import ForestImg from '../../../../public/Images/fantasyForest.jpeg'
+import ItemShopImg from '../../../../public/Images/itemShop.webp'
+import RandomEncImg from '../../../../public/Images/randomAmbush.jpeg'
+import WildMagicImg from '../../../../public/Images/spellcasting.jpeg'
+import LootImg from '../../../../public/Images/treasure.webp'
+import NameGenImg from '../../../../public/Images/characterCreation.webp'
+
 import Button from '@/Components/Button'
 
 //    Battle Section
@@ -30,48 +39,64 @@ export default function DMsTools () {
     function generateContent () {
         switch (activeSelection) {
             case '': return (
-                <section id='dmContent' className='flex px-12 lg:basis-1/2 mb-10'>
+                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
                     <Image className='rounded-md mx-auto' src={DMImage} width={800} height={500} placeholder='blur' alt="Image of a Dungeon Master" />
                 </section>
             )
             case 'combat': return (
-                <section>
-                    <h1>We combat now.</h1>
+                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
+                    <h1>Combat Tracker</h1>
+                    <Image className='rounded-md mx-auto' src={CombatImg} width={800} height={500} placeholder='blur' alt="Characters Fighting" />
+                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
                 </section>
             )
             case 'quickRef': return (
-                <section>
-                    <h1>We References now.</h1>
+                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
+                    <h1>Quick Reference</h1>
+                    <Image className='rounded-md mx-auto' src={AfflictionsImg} width={800} height={500} placeholder='blur' alt="Affliction Warlock" />
+                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
                 </section>
             )
             case 'shops': return (
-                <section>
-                    <h1>We Shoppin' now</h1>
+                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
+                    <h1>Shops</h1>
+                    <Image className='rounded-md mx-auto' src={ItemShopImg} width={800} height={500} placeholder='blur' alt="Image of an item shop" />
+                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
                 </section>
             )
             case 'loot' : return (
-                <section>
-                    <h1>We Lootin' now</h1>
+                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
+                    <h1>Loot</h1>
+                    <Image className='rounded-md mx-auto' src={LootImg} width={800} height={500} placeholder='blur' alt="Treasure box" />
+                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
                 </section>
             )
             case 'wildMagic': return (
-                <section>
-                    <h1>Magic go boom now</h1>
+                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
+                    <h1>Wild Magic Surges</h1>
+                    <Image className='rounded-md mx-auto' src={WildMagicImg} width={800} height={500} placeholder='blur' alt="Spellcaster" />
+                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
                 </section>
             )
             case 'randomEncounters': return(
-                <section>
-                    <h1>Chance encounters, Ahoy!</h1>
+                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
+                    <h1>Random Encounters</h1>
+                    <Image className='rounded-md mx-auto' src={RandomEncImg} width={800} height={500} placeholder='blur' alt="Ambush in waiting" />
+                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
                 </section>
             )
             case 'quickMaps' : return (
-                <section>
-                    <h1>Lets draw us a pirate map...</h1>
+                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
+                    <h1>Quick Maps</h1>
+                    <Image className='rounded-md mx-auto' src={ForestImg} width={800} height={500} placeholder='blur' alt="Forest Image" />
+                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
                 </section>
             )
             case 'nameGen' : return (
-                <section>
-                    <h1>Lets make some naaames!</h1>
+                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
+                    <h1>Name Generator</h1>
+                    <Image className='rounded-md mx-auto' src={NameGenImg} width={800} height={500} placeholder='blur' alt="Character Creation Screen" />
+                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
                 </section>
             )
         }
