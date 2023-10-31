@@ -1,19 +1,20 @@
 'use client'
 
 import Image from 'next/image'
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 
 import DMImage from '../../../../public/Images/Dungeon-Master.webp'
-import CombatImg from '../../../../public/Images/Combat.jpeg'
-import AfflictionsImg from '../../../../public/Images/afflictions.jpeg'
-import ForestImg from '../../../../public/Images/fantasyForest.jpeg'
-import ItemShopImg from '../../../../public/Images/itemShop.webp'
-import RandomEncImg from '../../../../public/Images/randomAmbush.jpeg'
-import WildMagicImg from '../../../../public/Images/spellcasting.jpeg'
-import LootImg from '../../../../public/Images/treasure.webp'
-import NameGenImg from '../../../../public/Images/characterCreation.webp'
 
 import Button from '@/Components/Button'
+
+import CombatTracker from './CombatTracker'
+import NameGen from './NameGen'
+import Shops from './Shops'
+import QuickRef from './QuickRef'
+import Loot from './Loot'
+import WildMagic from './WildMagic'
+import RandomEncounters from './RandomEncounters'
+import QuickMaps from './QuickMaps'
 
 //    Battle Section
 //      Initiative/turn tracker
@@ -44,60 +45,28 @@ export default function DMsTools () {
                 </section>
             )
             case 'combat': return (
-                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
-                    <h1>Combat Tracker</h1>
-                    <Image className='rounded-md mx-auto' src={CombatImg} width={800} height={500} placeholder='blur' alt="Characters Fighting" />
-                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
-                </section>
+                <CombatTracker/>
             )
             case 'quickRef': return (
-                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
-                    <h1>Quick Reference</h1>
-                    <Image className='rounded-md mx-auto' src={AfflictionsImg} width={800} height={500} placeholder='blur' alt="Affliction Warlock" />
-                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
-                </section>
+                <QuickRef/>
             )
             case 'shops': return (
-                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
-                    <h1>Shops</h1>
-                    <Image className='rounded-md mx-auto' src={ItemShopImg} width={800} height={500} placeholder='blur' alt="Image of an item shop" />
-                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
-                </section>
+                <Shops/>
             )
             case 'loot' : return (
-                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
-                    <h1>Loot</h1>
-                    <Image className='rounded-md mx-auto' src={LootImg} width={800} height={500} placeholder='blur' alt="Treasure box" />
-                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
-                </section>
+                <Loot/>
             )
             case 'wildMagic': return (
-                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
-                    <h1>Wild Magic Surges</h1>
-                    <Image className='rounded-md mx-auto' src={WildMagicImg} width={800} height={500} placeholder='blur' alt="Spellcaster" />
-                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
-                </section>
+                <WildMagic/>
             )
             case 'randomEncounters': return(
-                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
-                    <h1>Random Encounters</h1>
-                    <Image className='rounded-md mx-auto' src={RandomEncImg} width={800} height={500} placeholder='blur' alt="Ambush in waiting" />
-                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
-                </section>
+                <RandomEncounters/>
             )
             case 'quickMaps' : return (
-                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
-                    <h1>Quick Maps</h1>
-                    <Image className='rounded-md mx-auto' src={ForestImg} width={800} height={500} placeholder='blur' alt="Forest Image" />
-                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
-                </section>
+                <QuickMaps/>
             )
             case 'nameGen' : return (
-                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
-                    <h1>Name Generator</h1>
-                    <Image className='rounded-md mx-auto' src={NameGenImg} width={800} height={500} placeholder='blur' alt="Character Creation Screen" />
-                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
-                </section>
+                <NameGen/>
             )
         }
     }
