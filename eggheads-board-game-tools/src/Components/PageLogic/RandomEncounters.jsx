@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import RandomEncImg from '../../../../public/Images/randomAmbush.jpeg'
+import RandomEncImg from '../../../public/Images/randomAmbush.jpeg'
 
 export default function RandomEncounters () {
     return(

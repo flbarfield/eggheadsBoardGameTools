@@ -1,5 +1,10 @@
 import Image from 'next/image'
-import NameGenImg from '../../../../public/Images/characterCreation.webp'
+import NameGenImg from '../../../public/Images/characterCreation.webp'
+
+//    Name Generators for 
+//      towns
+//      cities
+//      NPCs
 
 export default function NameGen () {
     return(

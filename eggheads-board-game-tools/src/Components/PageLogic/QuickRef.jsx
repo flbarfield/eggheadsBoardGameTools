@@ -1,5 +1,11 @@
 import Image from 'next/image'
-import AfflictionsImg from '../../../../public/Images/afflictions.jpeg'
+import AfflictionsImg from '../../../public/Images/afflictions.jpeg'
+
+//    Quick References (will be shared with Player's Corner)
+//      Status Affects
+//    
+// API for conditions: https://www.dnd5eapi.co/api/conditions
+// https://www.dnd5eapi.co/api/conditions/blinded - displays condition desc
 
 export default function QuickRef () {
     return(

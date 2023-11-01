@@ -23,23 +23,18 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <span onClick={toggleNavLinks} className='hover:bg-EggheadBlue hover:text-white p-2 rounded-md cursor-pointer'>Table Top Roleplay</span>
-                        <ul className='shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden absolute'>
-                            <NavbarLink path='/tabletop/DMsTools' linkName='DMs Tools'/>
-                            <NavbarLink path='/tabletop/playersCorner' linkName="Player's Corner (not yet implemented)"/>
-                            <NavbarLink path='/tabletop/nameGenerators' linkName='Name Generators (not yet implemented)'/>
-                        </ul>
+                        <NavbarLink path='/tabletop' linkName='Tabletop RPGs'/>
                     </li>
                     <li>
                         <span onClick={toggleNavLinks} className='hover:bg-EggheadBlue hover:text-white p-2 rounded-md cursor-pointer relative'>Board Games</span>
                         <ul className='shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden absolute'>
-                            <li>Not Yet Implemented.</li>
+                            <li className='text-red-500'>Not Yet Implemented.</li>
                         </ul>
                     </li>
                     <li>
                         <span onClick={toggleNavLinks} className='hover:bg-EggheadBlue hover:text-white p-2 rounded-md cursor-pointer relative'>Miniatures</span>
                         <ul className='shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden absolute'>
-                            <li>Not Yet Implemented</li>
+                            <li className='text-red-500'>Not Yet Implemented</li>
                         </ul>
                     </li>
                 </ul>

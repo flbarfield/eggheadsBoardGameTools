@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import WildMagicImg from '../../../../public/Images/spellcasting.jpeg'
+import WildMagicImg from '../../../public/Images/spellcasting.jpeg'
 
 export default function WildMagic () {
     return(

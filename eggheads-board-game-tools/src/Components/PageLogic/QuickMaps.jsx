@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import ForestImg from '../../../../public/Images/fantasyForest.jpeg'
+import ForestImg from '../../../public/Images/fantasyForest.jpeg'
 
 export default function QuickMaps () {
     return(

@@ -1,5 +1,10 @@
 import Image from 'next/image'
-import CombatImg from '../../../../public/Images/Combat.jpeg'
+import CombatImg from '../../../public/Images/Combat.jpeg'
+
+//    Battle Section
+//      Initiative/turn tracker
+//      Monster/player Creator / insert monster/player
+
 
 export default function CombatTracker () {
     return(

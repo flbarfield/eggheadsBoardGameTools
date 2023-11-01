@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import ItemShopImg from '../../../../public/Images/itemShop.webp'
+import ItemShopImg from '../../../public/Images/itemShop.webp'
 
 export default function Shops () {
     return(

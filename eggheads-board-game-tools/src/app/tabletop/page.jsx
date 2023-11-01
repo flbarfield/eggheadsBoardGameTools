@@ -1,17 +1,121 @@
-import Link from 'next/link'
+'use client'
 
-export default function TableTop() {
+import Image from 'next/image'
+import { useState } from 'react'
+
+import DMImage from '../../../public/Images/Dungeon-Master.webp'
+
+import Button from '@/Components/Button'
+
+import CombatTracker from '../../Components/PageLogic/CombatTracker'
+import NameGen from '../../Components/PageLogic/NameGen'
+import Shops from '../../Components/PageLogic/Shops'
+import QuickRef from '../../Components/PageLogic/QuickRef'
+import Loot from '../../Components/PageLogic/Loot'
+import WildMagic from '../../Components/PageLogic/WildMagic'
+import RandomEncounters from '../../Components/PageLogic/RandomEncounters'
+import QuickMaps from '../../Components/PageLogic/QuickMaps'
+
+// DND 5E API:
+// https://www.dnd5eapi.co/api/
+// OBJ containing: {
+//     "ability-scores": "/api/ability-scores",
+//     "alignments": "/api/alignments",
+//     "backgrounds": "/api/backgrounds",
+//     "classes": "/api/classes",
+//     "conditions": "/api/conditions",
+//     "damage-types": "/api/damage-types",
+//     "equipment": "/api/equipment",
+//     "equipment-categories": "/api/equipment-categories",
+//     "feats": "/api/feats",
+//     "features": "/api/features",
+//     "languages": "/api/languages",
+//     "magic-items": "/api/magic-items",
+//     "magic-schools": "/api/magic-schools",
+//     "monsters": "/api/monsters",
+//     "proficiencies": "/api/proficiencies",
+//     "races": "/api/races",
+//     "rule-sections": "/api/rule-sections",
+//     "rules": "/api/rules",
+//     "skills": "/api/skills",
+//     "spells": "/api/spells",
+//     "subclasses": "/api/subclasses",
+//     "subraces": "/api/subraces",
+//     "traits": "/api/traits",
+//     "weapon-properties": "/api/weapon-properties"
+// }
+
+// Good example for a similar site with API use: https://open5e.com/
+
+
+
+
+export default function DMsTools () {
+    const [activeSelection, setActiveSelection] = useState('')
+
+    //switch cases based on button click.
+    function generateContent () {
+        switch (activeSelection) {
+            case '': return (
+                <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
+                    <Image className='rounded-md mx-auto' src={DMImage} width={800} height={500} placeholder='blur' alt="Image of a Dungeon Master" />
+                </section>
+            )
+            case 'combat': return (
+                <CombatTracker/>
+            )
+            case 'quickRef': return (
+                <QuickRef/>
+            )
+            case 'shops': return (
+                <Shops/>
+            )
+            case 'loot' : return (
+                <Loot/>
+            )
+            case 'wildMagic': return (
+                <WildMagic/>
+            )
+            case 'randomEncounters': return(
+                <RandomEncounters/>
+            )
+            case 'quickMaps' : return (
+                <QuickMaps/>
+            )
+            case 'nameGen' : return (
+                <NameGen/>
+            ) 
+        }
+    }
+
+    // original template
     return (
         <main>
-            <section className="flex flex-col text-center bg-slate-100 w-3/4 mx-auto pb-10 rounded-lg pt-2">
-                <h1 className='text-center mt-10'>Table Top Games</h1>
-                <ul className='mt-10 flex flex-col gap-2'>
-                    <li><Link className='hover:bg-EggheadBlue hover:text-white p-2 rounded-md cursor-pointer' href='/tabletop/DMsTools'>Dms Tools</Link></li>
-                    <li><Link className='hover:bg-EggheadBlue hover:text-white p-2 rounded-md cursor-pointer' href='/tabletop/playersCorner'>Player's Corner</Link></li>
-                    <li><Link className='hover:bg-EggheadBlue hover:text-white p-2 rounded-md cursor-pointer' href='/tabletop/nameGenerators'>Name Generators</Link></li>
+        <section className='flex flex-col mt-12 gap-10 px-30 sm:px-0 md:px-20 lg:px-10 lg:flex-row lg:gap-0 xl:px-40'>
+        <section className='flex flex-col gap-2 lg:basis-1/2'>
+            <div className='flex flex-col px-12 gap-5 lg:justify-center'>
+                <h1>DM's Tools</h1>
+                <span>These tools were made with Dungeons and Dragons 5th Edition in mind.</span>
+                <ul className='mt-5 flex gap-5 flex-wrap'>
+                    <li onClick={() => setActiveSelection('combat')}><Button  label={'Combat'}/></li>
+                    <li onClick={() => setActiveSelection('quickRef')}><Button label={'Quick Reference'}/></li>
                 </ul>
-            </section>
+                <section>
+                <h1>Randomizers:</h1>
+                    <ul className='flex gap-5 flex-wrap mt-5'>
+                        <li onClick={() => setActiveSelection('shops')}><Button label={'Shops'}/></li>
+                        <li onClick={() => setActiveSelection('loot')}><Button label={'Loot'}/></li>
+                        <li onClick={() => setActiveSelection('wildMagic')}><Button label={'Wild Magic Surge'}/></li>
+                        <li onClick={() => setActiveSelection('randomEncounters')}><Button label={'Random Encounters'}/></li>
+                        <li onClick={() => setActiveSelection('quickMaps')}><Button label={'Quick Maps'}/></li>
+                        <li onClick={() => setActiveSelection('nameGen')}><Button label={'Name Generators'}/></li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+            {generateContent()}
+        </section>
         </main>
-        
     )
 }
+    
