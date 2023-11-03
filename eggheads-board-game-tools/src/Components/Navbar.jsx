@@ -22,9 +22,7 @@ const Navbar = () => {
                             </div>
                         </Link>
                     </li>
-                    <li>
-                        <NavbarLink path='/tabletop' linkName='Tabletop RPGs'/>
-                    </li>
+                    <NavbarLink path='/tabletop' linkName='Tabletop RPGs'/>
                     <li>
                         <span onClick={toggleNavLinks} className='hover:bg-EggheadBlue hover:text-white p-2 rounded-md cursor-pointer relative'>Board Games</span>
                         <ul className='shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden absolute'>
