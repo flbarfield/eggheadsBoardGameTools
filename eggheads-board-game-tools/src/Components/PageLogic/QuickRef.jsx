@@ -10,23 +10,34 @@ import { useEffect, useState } from 'react'
 // https://www.dnd5eapi.co/api/conditions/blinded - displays condition desc
 
 export default function QuickRef () {
-    let [generatedInfoButtons, setGeneratedInfoButtons] = useState('')
+    let [buttonData, setButtonData] = useState([])
     let [generatedInfo, setGeneratedInfo] = useState('')
 
-    async function populateAbilityData() {
+    async function populateButtons(e) {
         try {
-            const res = await fetch('https://www.dnd5eapi.co/api/ability-scores')
+            const res = await fetch(`https://www.dnd5eapi.co/api/${e.target.textContent.toLowerCase()}`)
             const data = await res.json()
             
-            // console.log(data.results[0].name)
             let i = 0
+            let dataList = []
             while (i < data.count) {
-                setGeneratedInfoButtons += ' ' + data.results[i].name
+                dataList.push(data.results[i].name)
                 i++
             }
-            console.log(setGeneratedInfoButtons) 
+            setButtonData(dataList)
             
-   
+        } catch (error) {
+            alert('Error retriving data. May be an issue with the API')
+        }
+    }
+
+    async function populateBtnInfo (e) {
+        try {
+            const res = await fetch(`https://www.dnd5eapi.co/api/${e.target.textContent.toLowerCase()}`)
+            const data = await res.json()
+
+
+
         } catch (error) {
             alert('Error retriving data. May be an issue with the API')
         }
@@ -38,24 +49,35 @@ export default function QuickRef () {
             <Image className='rounded-md mx-auto' src={AfflictionsImg} width={800} height={500} placeholder='blur' alt="Affliction Warlock" />
             <section>
                 <ul className='flex flex-wrap gap-3'>
-                    <li onClick={populateAbilityData}><Button label='Ability Scores'/></li>
-                    <li><Button label='Classes'/></li>
-                    <li><Button label='Conditions'/></li>
-                    <li><Button label='Feats'/></li>
-                    <li><Button label='Languages'/></li>
-                    <li><Button label='Skills'/></li>
-                    <li><Button label='Rules'/></li>
-                    <li><Button label='Traits'/></li>
+                    <li onClick={populateButtons}><Button label='Ability-Scores'/></li>
+                    <li onClick={populateButtons}><Button label='Classes'/></li>
+                    <li onClick={populateButtons}><Button label='Conditions'/></li>
+                    <li onClick={populateButtons}><Button label='Feats'/></li>
+                    <li onClick={populateButtons}><Button label='Languages'/></li>
+                    <li onClick={populateButtons}><Button label='Skills'/></li>
+                    <li onClick={populateButtons}><Button label='Rules'/></li>
+                    <li onClick={populateButtons}><Button label='Traits'/></li>
                 </ul>
             </section>
-            <section id='generatedInfo'>
-                <ul>
-                    <p>{generatedInfoButtons}</p>
+            <section className='border-t-cyan-200 border-t-2' id='generatedInfo'>
+                <ul className='flex flex-wrap gap-1 py-5'>
+                    {buttonData.map((item) => {
+                        return (
+                            <>
+                                <li onClick={populateBtnInfo}><Button label={item}/></li>
+                            </>
+                        )
+                    })}
                 </ul>
-                {generatedInfo}
+                <section className='border-t-cyan-200 border-t-2 p-2'>
+                    {generatedInfo} 
+                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
+                </section>
+                
+                
             </section>
             
-            <p className='text-center text-red-500'>Not Yet Implemented.</p>
+            
         </section>
     )
 }
