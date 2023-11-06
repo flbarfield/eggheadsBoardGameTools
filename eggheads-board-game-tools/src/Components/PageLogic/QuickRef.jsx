@@ -1,17 +1,17 @@
 import Image from 'next/image'
 import AfflictionsImg from '../../../public/Images/afflictions.jpeg'
 import Button from '../Button'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
-//    Quick References (will be shared with Player's Corner)
-//      Status Affects
-//    
-// API for conditions: https://www.dnd5eapi.co/api/conditions
-// https://www.dnd5eapi.co/api/conditions/blinded - displays condition desc
+// Notes to self...:
+// unsure if there's a way that I can pass a reference from the top level buttons, onto next level buttons so that I can still continue down the chain of api calls as I genenerate more and more specific information. Aware that Classes/constructors can do this inherently, but is there some form of attribute I'm unaware of? Coming back to this portion of the app later.
+
+// Hard coding this data in seperate components is certainly a sensible option too. Probably more so actually, populating a few buttons for each category is low effort combined with the benefit less api server pings, and the properties to obtain changes depending on the category. So I'm going to go this route
 
 export default function QuickRef () {
     let [buttonData, setButtonData] = useState([])
     let [generatedInfo, setGeneratedInfo] = useState('')
+
 
     async function populateButtons(e) {
         try {
@@ -33,16 +33,15 @@ export default function QuickRef () {
 
     async function populateBtnInfo (e) {
         try {
-            const res = await fetch(`https://www.dnd5eapi.co/api/${e.target.textContent.toLowerCase()}`)
+            const res = await fetch(`https://www.dnd5eapi.co/api/feats/${e.target.textContent.toLowerCase()}`)
             const data = await res.json()
-
-
+            setGeneratedInfo(data.desc)
 
         } catch (error) {
             alert('Error retriving data. May be an issue with the API')
         }
     }
-
+    
     return(
         <section id='dmContent' className='flex flex-col gap-5 px-12 lg:basis-1/2 mb-10'>
             <h1>Quick Reference</h1>
