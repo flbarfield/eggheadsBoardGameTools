@@ -17,7 +17,6 @@ import Skills from '@/app/tabletop/Components/Skills'
 // Hard coding this data in seperate components is certainly a sensible option too. Probably more so actually, populating a few buttons for each category is low effort combined with the benefit less api server pings, and the properties to obtain changes depending on the category. So I'm going to go this route
 
 export default function QuickRef () {
-    let [generatedInfo, setGeneratedInfo] = useState('')
     let [currentRefSelect, setCurrentRefSelect] = useState('')
 
     function generateSelectionButtons () {
@@ -31,12 +30,7 @@ export default function QuickRef () {
             case 'traits' : return <Traits/>
             case 'rules' : return <Rules/>
         }
-    }
-
-    function generateInfo () {
-        //todo
-    }
-    
+    }    
 
 
     // async function populateButtons(e) {
@@ -85,19 +79,8 @@ export default function QuickRef () {
                 </ul>
             </section>
             <section className='border-t-cyan-200 border-t-2' id='generatedInfo'>
-                
                     {generateSelectionButtons()}
-                    {/* {buttonData.map((item) => {
-                        return (
-                            <>
-                                <li onClick={populateBtnInfo}><Button label={item}/></li>
-                            </>
-                        )
-                    })} */}
-                
-                
                 <section className='border-t-cyan-200 border-t-2 p-2'>
-                    {generateInfo()} 
                     <p className='text-center text-red-500'>Not Yet Implemented.</p>
                 </section>
                 
