@@ -5,7 +5,6 @@ import Button from "@/Components/Button"
 export default function AbilityScores () {
     let [currentHeader, setCurrentHeader] = useState ('')
     let [currentDesc, setCurrentDesc] = useState ('')
-    let [currentSkills, setCurrentSkills] = useState('')
 
     async function populateContent (e) {
         try {
@@ -14,8 +13,6 @@ export default function AbilityScores () {
 
             setCurrentHeader(data.full_name)
             setCurrentDesc(data.desc)
-            // skills comes back as a list. NEed to interate through them.
-            // setCurrentSkills(data.skills)
 
         } catch (error) {
             setCurrentHeader('Error Retrieving Data. Problem with connected API.')
@@ -44,7 +41,6 @@ export default function AbilityScores () {
             <section className='border-t-cyan-200 border-t-2 p-2'>
                 <h1>{currentHeader}</h1>
                 <p className="text-center mt-2 mb-2">{currentDesc}</p>
-                {/* {currentSkills} */}
             </section>
         </>
     )   
