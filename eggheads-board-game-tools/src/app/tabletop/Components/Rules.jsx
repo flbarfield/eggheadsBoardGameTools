@@ -5,8 +5,20 @@ export default function Rules () {
     let [currentHeader, setCurrentHeader] = useState ('')
     let [currentDesc, setCurrentDesc] = useState ('')
 
-    function populateContent () {
-        //to do
+    async function populateContent (e) {
+        // To do...going to be a time-consuming section
+
+        // try {
+        //     const res = await fetch(`https://www.dnd5eapi.co/api/languages/${e.target.textContent.toLowerCase()}`)
+        //     const data = await res.json()
+
+        //     setCurrentHeader(data.name)
+        //     setCurrentDesc(data.type)
+        //     setCurrentDescTwo(data.typical_speakers)
+
+        // } catch (error) {
+        //     setCurrentHeader('Error Retrieving Data. Problem with connected API.')
+        // }
     }
 
     return (
@@ -32,8 +44,7 @@ export default function Rules () {
                 </li> 
             </ul>
             <section className='border-t-cyan-200 border-t-2 p-2'>
-                    <h1>{currentHeader}</h1>
-                    <p className="text-center mt-2 mb-2">{currentDesc}</p>
+                    <p className='text-center text-red-500'>Not Yet Implemented.</p>
             </section>
         </>
     )   
