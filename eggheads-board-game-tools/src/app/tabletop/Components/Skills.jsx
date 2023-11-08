@@ -25,7 +25,7 @@ export default function Skills () {
                     <Button label={'Acrobatics'}/>
                 </li>   
                 <li onClick={populateContent}>
-                    <Button label={'Animal Handling'}/>
+                    <Button label={'Animal-Handling'}/>
                 </li> 
                 <li onClick={populateContent}>
                     <Button label={'Arcana'}/>

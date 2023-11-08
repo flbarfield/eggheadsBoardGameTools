@@ -63,7 +63,7 @@ export default function Conditions () {
                 <Button label={'Stunned'}/>
             </li> 
             <li onClick={populateContent}>
-                <Button label={'Unconcious'}/>
+                <Button label={'Unconscious'}/>
             </li> 
             <section className='border-t-cyan-200 border-t-2 p-2'>
                 <h1>{currentHeader}</h1>

@@ -21,7 +21,7 @@ export default function Traits () {
         <>
         <ul className='flex flex-wrap gap-1 py-5'>
             <li onClick={populateContent}>
-                <Button label={'Aritificer\'s-Lore'}/>
+                <Button label={'Artificers-Lore'}/>
             </li>   
             <li onClick={populateContent}>
                 <Button label={'Brave'}/>
@@ -120,13 +120,13 @@ export default function Traits () {
                 <Button label={'Skill-Versatility'}/>
             </li> 
             <li onClick={populateContent}>
-                <Button label={'Stonecutting'}/>
+                <Button label={'Stonecunning'}/>
             </li> 
             <li onClick={populateContent}>
                 <Button label={'Tinker'}/>
             </li> 
             <li onClick={populateContent}>
-                <Button label={'Tool Proficiency'}/>
+                <Button label={'Tool-Proficiency'}/>
             </li> 
             <li onClick={populateContent}>
                 <Button label={'Trance'}/>
