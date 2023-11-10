@@ -11,6 +11,9 @@ import { useState } from 'react'
 export default function CombatTracker () {
     let [currentMonsterList, setCurrentMonsterList] = useState([])
     let [monsterText, setMonsterText] = useState('')
+    let [monsterAC, setMonsterAC] = useState(null)
+    let [monsterHealth, setMonsterHealth] = useState(null)
+    let [monsterInit, setMonsterInit] = useState(null)
     
     async function populateMonsters() {
         try {
@@ -20,7 +23,6 @@ export default function CombatTracker () {
             let count = 0
             let monsterList = []
 
-            // (count < data.count) , when I'm running this for real.
             while (count < data.count){
                 monsterList.push(data.results[count].name)
                 count++
@@ -30,6 +32,14 @@ export default function CombatTracker () {
 
         } catch (error) {
             console.log('Error Populating Monsters. Problem with API')
+        }
+    }
+
+    class QuickMonster {
+        constructor (hp, ac, speed) {
+            this.hp = hp
+            this.ac = ac
+            this.speed = speed
         }
     }
 
