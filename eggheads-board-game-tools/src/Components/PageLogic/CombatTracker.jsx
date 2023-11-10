@@ -10,6 +10,7 @@ import { useState } from 'react'
 
 export default function CombatTracker () {
     let [currentMonsterList, setCurrentMonsterList] = useState([])
+    let [monsterText, setMonsterText] = useState('')
     
     async function populateMonsters() {
         try {
@@ -20,14 +21,12 @@ export default function CombatTracker () {
             let monsterList = []
 
             // (count < data.count) , when I'm running this for real.
-            while (count < 5){
-                monsterList.append.push(data.results[count].name)
+            while (count < data.count){
+                monsterList.push(data.results[count].name)
                 count++
             }
-            console.log(monsterList)
-            setCurrentMonsterList(monsterList)
 
-            console.log(currentMonsterList)
+            setCurrentMonsterList(monsterList)
 
         } catch (error) {
             console.log('Error Populating Monsters. Problem with API')
@@ -41,16 +40,27 @@ export default function CombatTracker () {
             <h1>Combat Tracker</h1>
             <Image className='rounded-md mx-auto' src={CombatImg} width={800} height={500} placeholder='blur' alt="Characters Fighting" />
             <section className='flex flex-col mx-auto'>
-                <div>
+                <div className='mb-5'>
                     <i className='fa-solid fa-magnifying-glass mr-5'></i>
                     <input className='px-2' type="text" placeholder='Monster Search'/>
                     <Button label={'Add'}/>
                 </div>
-                <ul className='mh-50 overflow-scroll'>
-                    {currentMonsterList}
-                    <li><span>test</span></li>
-                    <li><span>test</span></li>
+                <ul className='max-h-44 overflow-scroll'>
+                    {currentMonsterList.map((monster) => {
+                        return (
+                            <>
+                            <li className='hover:bg-EggheadBlue hover:text-white cursor-pointer'><span>{monster}</span></li>
+                            </>
+                        )
+                    })}
                 </ul>
+                <section className='mt-5'>
+                    <h1 className='mb-5'>Initiative Tracker</h1>
+                    <ul className='flex flex-col gap-2'>
+                        <li><span>testCharacterOne | Initiative: 5 | AC: 15 | Health: 150</span></li>
+                        <li><span>testCharacterTwo | Initiative: 1 | AC: 10 | Health: 35</span></li>
+                    </ul>
+                </section>
             </section>
         </section>
     )
