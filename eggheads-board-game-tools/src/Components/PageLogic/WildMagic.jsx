@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import WildMagicImg from '../../../public/Images/spellcasting.jpeg'
 import Button from '../Button'
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 
 export default function WildMagic () {
     let [magicEffect, setMagicEffect] = useState('')
