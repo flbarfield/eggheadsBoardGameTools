@@ -15,6 +15,7 @@ import Loot from '../../Components/PageLogic/Loot'
 import WildMagic from '../../Components/PageLogic/WildMagic'
 import RandomEncounters from '../../Components/PageLogic/RandomEncounters'
 import QuickMaps from '../../Components/PageLogic/QuickMaps'
+import NAButton from '@/Components/NAButton'
 
 // DND 5E API:
 // https://www.dnd5eapi.co/api/
@@ -97,18 +98,18 @@ export default function DMsTools () {
                 <h1>DM's Tools</h1>
                 <span>These tools were made with Dungeons and Dragons 5th Edition in mind.</span>
                 <ul className='mt-5 flex gap-5 flex-wrap'>
-                    <li onClick={() => setActiveSelection('combat')}><Button  label={'Combat'}/></li>
+                    <li onClick={() => setActiveSelection('combat')}><NAButton  label={'Combat'}/></li>
                     <li onClick={() => setActiveSelection('quickRef')}><Button label={'Quick Reference'}/></li>
                 </ul>
                 <section>
                 <h1>Randomizers:</h1>
                     <ul className='flex gap-5 flex-wrap mt-5'>
                         <li onClick={() => setActiveSelection('shops')}><Button label={'Shops'}/></li>
-                        <li onClick={() => setActiveSelection('loot')}><Button label={'Loot'}/></li>
+                        <li onClick={() => setActiveSelection('loot')}><NAButton label={'Loot'}/></li>
                         <li onClick={() => setActiveSelection('wildMagic')}><Button label={'Wild Magic Surge'}/></li>
                         <li onClick={() => setActiveSelection('randomEncounters')}><Button label={'Random Encounters'}/></li>
-                        <li onClick={() => setActiveSelection('quickMaps')}><Button label={'Quick Maps'}/></li>
-                        <li onClick={() => setActiveSelection('nameGen')}><Button label={'Name Generators'}/></li>
+                        <li onClick={() => setActiveSelection('quickMaps')}><NAButton label={'Quick Maps'}/></li>
+                        <li onClick={() => setActiveSelection('nameGen')}><NAButton label={'Name Generators'}/></li>
                     </ul>
                 </section>
             </div>

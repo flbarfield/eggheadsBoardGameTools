@@ -9,6 +9,7 @@ import Languages from '@/app/tabletop/Components/Languages'
 import Rules from '@/app/tabletop/Components/Rules'
 import Traits from '@/app/tabletop/Components/Traits'
 import Skills from '@/app/tabletop/Components/Skills'
+import NAButton from '../NAButton'
 
 export default function QuickRef () {
     let [currentRefSelect, setCurrentRefSelect] = useState('')
@@ -36,7 +37,7 @@ export default function QuickRef () {
                     <li onClick={() => setCurrentRefSelect('feats')}><Button label='Feats'/></li>
                     <li onClick={() => setCurrentRefSelect('languages')}><Button label='Languages'/></li>
                     <li onClick={() => setCurrentRefSelect('skills')}><Button label='Skills'/></li>
-                    <li onClick={() => setCurrentRefSelect('rules')}><Button label='Rules'/></li>
+                    <li onClick={() => setCurrentRefSelect('rules')}><NAButton label='Rules'/></li>
                     <li onClick={() => setCurrentRefSelect('traits')}><Button label='Traits'/></li>
                 </ul>
             </section>

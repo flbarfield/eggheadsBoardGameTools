@@ -1,6 +1,5 @@
 import Button from "@/Components/Button"
 import { useState } from "react"
-import Link from "next/link"
 
 export default function UrbanEnv () {
     let [diceRoll, setDiceRoll] = useState('')
@@ -316,12 +315,12 @@ export default function UrbanEnv () {
 }
     return(
         <div className="flex flex-col mx-auto">
-            <h1>Urban Environment Generator</h1>
+            <h1 className="text-center">Urban Environment Generator</h1>
             <div className="mx-auto mt-5" onClick={generateRandomEffect}>
                 <Button label={'Roll the dice!'}/>
             </div>
             <p className="my-5">{diceRoll} <br /><br /> {encounter}</p>
-            <span>Entries gathered from DnDspeak.com: <Link href='https://www.dndspeak.com/2021/07/14/100-non-combat-urban-encounters/#google_vignette'>Here</Link></span>
+            <span className='text-center'>Entries gathered from DnDspeak.com: <a className="text-blue-400" href='https://www.dndspeak.com/2021/07/14/100-non-combat-urban-encounters/#google_vignette'>Here</a></span>
         </div>
     )
 }

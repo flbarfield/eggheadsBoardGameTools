@@ -10,6 +10,7 @@ export default function Footer () {
                         <input type="text" placeholder="Email:" name="email"/>
                         <Button label='Submit'/>
                     </form>
+                    <span className='text-red-500'>Not Yet Implemented.</span>
                 </section>
                 <section className="mt-5 text-center">
                     <span className="">Follow Us:</span>
