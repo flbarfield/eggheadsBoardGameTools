@@ -1,4 +1,4 @@
-import gameWall from '../../public/Images/boardGameWall.png'
+import gameWall from '../../public/Images/boardGameWall.PNG'
 import Image from 'next/image'
 import TextPill from '../Components/TextPill'
 
