@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import LootImg from '../../../public/Images/treasure.webp'
+import LootImg from '../../../../public/Images/treasure.webp'
 
 export default function Loot () {
     return(

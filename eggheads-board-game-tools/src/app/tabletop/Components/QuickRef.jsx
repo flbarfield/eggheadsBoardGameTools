@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import AfflictionsImg from '../../../public/Images/afflictions.jpeg'
-import Button from '../Button'
+import AfflictionsImg from '../../../../public/Images/afflictions.jpeg'
+import Button from '../../../Components/Button'
 import { useState } from 'react'
 import AbilityScores from '@/app/tabletop/Components/AbilityScore'
 import Conditions from '@/app/tabletop/Components/Conditions'
@@ -9,7 +9,7 @@ import Languages from '@/app/tabletop/Components/Languages'
 import Rules from '@/app/tabletop/Components/Rules'
 import Traits from '@/app/tabletop/Components/Traits'
 import Skills from '@/app/tabletop/Components/Skills'
-import NAButton from '../NAButton'
+import NAButton from '../../../Components/NAButton'
 
 export default function QuickRef () {
     let [currentRefSelect, setCurrentRefSelect] = useState('')

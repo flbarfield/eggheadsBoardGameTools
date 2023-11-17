@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import RandomEncImg from '../../../public/Images/randomAmbush.jpeg'
-import Button from '../Button'
+import RandomEncImg from '../../../../public/Images/randomAmbush.jpeg'
+import Button from '../../../Components/Button'
 import { useState } from 'react'
 import UrbanEnv from '@/app/tabletop/Components/urbanEnv'
 import SwampEnv from '@/app/tabletop/Components/swampEnv'
@@ -9,7 +9,7 @@ import SeaTravelEnv from '@/app/tabletop/Components/seaTravelEnv'
 import JungleEnv from '@/app/tabletop/Components/jungleEnv'
 import LongRestEnv from '@/app/tabletop/Components/longRestEnv'
 import ForestEnv from '@/app/tabletop/Components/forestEnv'
-import NAButton from '../NAButton'
+import NAButton from '../../../Components/NAButton'
 
 export default function RandomEncounters () {
     let [environment, setEnvironment] = useState('')

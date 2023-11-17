@@ -7,15 +7,16 @@ import DMImage from '../../../public/Images/Dungeon-Master.webp'
 
 import Button from '@/Components/Button'
 
-import CombatTracker from '../../Components/PageLogic/CombatTracker'
-import NameGen from '../../Components/PageLogic/NameGen'
-import Shops from '../../Components/PageLogic/Shops'
-import QuickRef from '../../Components/PageLogic/QuickRef'
-import Loot from '../../Components/PageLogic/Loot'
-import WildMagic from '../../Components/PageLogic/WildMagic'
-import RandomEncounters from '../../Components/PageLogic/RandomEncounters'
-import QuickMaps from '../../Components/PageLogic/QuickMaps'
+import CombatTracker from './Components/CombatTracker'
+import NameGen from './Components/NameGen'
+import Shops from './Components/Shops'
+import QuickRef from './Components/QuickRef'
+import Loot from './Components/Loot'
+import WildMagic from './Components/WildMagic'
+import RandomEncounters from './Components/RandomEncounters'
+import QuickMaps from './Components/QuickMaps'
 import NAButton from '@/Components/NAButton'
+import DungeonDoors from './Components/DungeonDoors'
 
 // DND 5E API:
 // https://www.dnd5eapi.co/api/
@@ -86,6 +87,9 @@ export default function DMsTools () {
             case 'nameGen' : return (
                 <NameGen/>
             ) 
+            case 'dungeonDoors' : return (
+                <DungeonDoors/>
+            )
         }
     }
 
@@ -104,12 +108,13 @@ export default function DMsTools () {
                 <section>
                 <h1>Randomizers:</h1>
                     <ul className='flex gap-5 flex-wrap mt-5'>
-                        <li onClick={() => setActiveSelection('shops')}><NAButton label={'Shops'}/></li>
+                        <li onClick={() => setActiveSelection('dungeonDoors')}><Button label={'Dungeon Doors'}/></li>
                         <li onClick={() => setActiveSelection('loot')}><NAButton label={'Loot'}/></li>
-                        <li onClick={() => setActiveSelection('wildMagic')}><Button label={'Wild Magic Surge'}/></li>
+                        <li onClick={() => setActiveSelection('nameGen')}><NAButton label={'Name Generators'}/></li>
                         <li onClick={() => setActiveSelection('randomEncounters')}><Button label={'Random Encounters'}/></li>
                         <li onClick={() => setActiveSelection('quickMaps')}><NAButton label={'Quick Maps'}/></li>
-                        <li onClick={() => setActiveSelection('nameGen')}><NAButton label={'Name Generators'}/></li>
+                        <li onClick={() => setActiveSelection('shops')}><NAButton label={'Shops'}/></li>
+                        <li onClick={() => setActiveSelection('wildMagic')}><Button label={'Wild Magic Surge'}/></li>
                     </ul>
                 </section>
             </div>

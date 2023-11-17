@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import CombatImg from '../../../public/Images/Combat.jpeg'
-import Button from '../Button'
+import CombatImg from '../../../../public/Images/Combat.jpeg'
+import Button from '@/Components/Button'
 import { useState } from 'react'
 
 //    Battle Section
@@ -42,6 +42,8 @@ export default function CombatTracker () {
             this.speed = speed
         }
     }
+
+
 
     populateMonsters()
 

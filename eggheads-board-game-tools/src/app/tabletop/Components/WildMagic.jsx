@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import WildMagicImg from '../../../public/Images/spellcasting.jpeg'
-import Button from '../Button'
+import WildMagicImg from '../../../../public/Images/spellcasting.jpeg'
+import Button from '../../../Components/Button'
 import { useState } from 'react'
 
 export default function WildMagic () {

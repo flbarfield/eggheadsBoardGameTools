@@ -78,7 +78,7 @@ export default function Skills () {
             </ul>
             <section className='border-t-cyan-200 border-t-2 p-2'>
                     <h1>{currentHeader}</h1>
-                    <p className="text-center mt-2 mb-2">{currentDesc}</p>
+                    <p className="mt-2 mb-2">{currentDesc}</p>
             </section>
         </div>
     )   
