@@ -1,6 +1,6 @@
 
 
-# Demo Website: Not yet online
+# Demo Website: [Here](https://eggheads-board-game-tools.vercel.app/)
 
 ![Egghead Site Still](https://res.cloudinary.com/dniwvymzt/image/upload/v1698929614/Portfolio/EggheadStill_emznlg.png)
 
@@ -21,7 +21,7 @@ This has been a pet project that's allowed me to fully understand the excellent 
 
 ---
 <h2>Usage</h2>
-4.  In the command prompt within the installed folder, type "npm run dev" <br>
+4.  In the command prompt within the installed folder, type "npm run dev" <br/>
 5.  Navigate to  "localhost:3000" on your favorite web browser
 
 <h3>More Projects</h3>
