@@ -21,7 +21,7 @@ export default function Languages () {
     }
 
     return (
-        <>
+        <div className="border-t-cyan-200 border-t-2">
             <ul className='flex flex-wrap gap-1 py-5'>
                 <li onClick={populateContent}>
                     <Button label={'Abyssal'}/>
@@ -76,6 +76,6 @@ export default function Languages () {
                     <h1>{currentHeader}</h1>
                     <p className="text-center mt-2 mb-2">Type: {currentDesc} <br/> Typical Speakers: {currentDescTwo}</p>
             </section>
-        </>
+        </div>
     )   
 }

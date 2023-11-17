@@ -34,7 +34,7 @@ export default function RandomEncounters () {
                 <span className='text-center'>Choose the environment.</span>
                     <ul className='flex flex-wrap gap-2'>
                         <li onClick={() => setEnvironment('urban')}><Button label={'Urban'}/></li>
-                        <li onClick={() => setEnvironment('forest')}><NAButton label={'Forest'}/></li>
+                        <li onClick={() => setEnvironment('forest')}><Button label={'Forest'}/></li>
                         <li onClick={() => setEnvironment('swamp')}><NAButton label={'Swamp'}/></li>
                         <li onClick={() => setEnvironment('tavern')}><NAButton label={'Tavern'}/></li>
                         <li onClick={() => setEnvironment('seaTravel')}><NAButton label={'Sea Travel'}/></li>

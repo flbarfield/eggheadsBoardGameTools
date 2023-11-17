@@ -41,7 +41,7 @@ export default function QuickRef () {
                     <li onClick={() => setCurrentRefSelect('traits')}><Button label='Traits'/></li>
                 </ul>
             </section>
-            <section className='border-t-cyan-200 border-t-2' id='generatedInfo'>
+            <section id='generatedInfo'>
                 {generateSelectionButtons()}
             </section>
         </section>

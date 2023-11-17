@@ -18,7 +18,7 @@ export default function Traits () {
         }
     }
     return (
-        <>
+        <div className='border-t-cyan-200 border-t-2'>
         <ul className='flex flex-wrap gap-1 py-5'>
             <li onClick={populateContent}>
                 <Button label={'Artificers-Lore'}/>
@@ -136,6 +136,6 @@ export default function Traits () {
                 <h1>{currentHeader}</h1>
                 <p className="text-center mt-2 mb-2">{currentDesc} </p>
         </section>
-        </>
+        </div>
     )   
 }
