@@ -317,7 +317,7 @@ export default function DungeonDoors () {
 }
 
     return (
-        <div className="flex flex-col mx-auto gap-5 lg:basis-1/2 ">
+        <div className="flex flex-col mx-14 gap-5 lg:basis-1/2 ">
             <h1 className="text-center">Dungeon Door Generator</h1>
             <Image src={dungeonDoor} className='rounded-md mx-auto'width={800} height={500} placeholder='blur' alt="Dungeon Door"/>
             <div className="mx-auto mt-5" onClick={generateRandomDoor}>
