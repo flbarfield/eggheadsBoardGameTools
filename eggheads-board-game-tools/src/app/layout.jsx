@@ -6,7 +6,7 @@ import Footer from '@/Components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Egghead\'s Board Game Tools',
+  title: 'Eggheads Board Game Tools',
   description: 'The one stop shop for all your game-aid needs!',
 }
 
