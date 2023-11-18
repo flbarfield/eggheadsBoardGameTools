@@ -20,6 +20,8 @@ export default function Home() {
         <h2 className='my-10 text-center'>Recent Updates:</h2>
         <section className='text-center pt-5 flex flex-col mx-2 md:flex-row md:flex-wrap'>
           <TextPill header={'Release! Sort of.'} date={'11/18/2023'} desc1={'We\'re now online!'} desc2={'Now that we\'ve implemented a multitude of different random encounters and rule generators, we\'ve come to the conclusion that while we could wait until forever to release everything we\'ve ever dreamed of to help your game experiences, it would deprive YOU of using the wonderful tools we have available to you now!'} desc3={'While only the tabletop RPG section is the only main portion of this website available at this time, know that we have big plans, and be sure to check back often!'}/>
+          <TextPill header={'Nothing here Yet! Just test boxes.'} date={'11/18/2023'} desc1={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos tempore, expedita, molestias, necessitatibus similique ipsum veniam incidunt dolore hic placeat quae laborum? Saepe a recusandae minus omnis tempora, dolorum perferendis!'}/>
+          <TextPill header={'Nothing here Yet! Just test boxes.'} date={'11/18/2023'} desc1={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos tempore, expedita, molestias, necessitatibus similique ipsum veniam incidunt dolore hic placeat quae laborum? Saepe a recusandae minus omnis tempora, dolorum perferendis!'}/>
         </section>
     </main>
   )
