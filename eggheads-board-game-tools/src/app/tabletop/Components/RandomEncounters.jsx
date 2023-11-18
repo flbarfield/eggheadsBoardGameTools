@@ -3,13 +3,11 @@ import RandomEncImg from '../../../../public/Images/randomAmbush.jpeg'
 import Button from '../../../Components/Button'
 import { useState } from 'react'
 import UrbanEnv from '@/app/tabletop/Components/urbanEnv'
-import SwampEnv from '@/app/tabletop/Components/swampEnv'
 import TavernEnv from '@/app/tabletop/Components/tavernEnv'
 import SeaTravelEnv from '@/app/tabletop/Components/seaTravelEnv'
 import JungleEnv from '@/app/tabletop/Components/jungleEnv'
 import LongRestEnv from '@/app/tabletop/Components/longRestEnv'
 import ForestEnv from '@/app/tabletop/Components/forestEnv'
-import NAButton from '../../../Components/NAButton'
 import DesertEnv from './DesertEnv'
 
 export default function RandomEncounters () {
@@ -19,7 +17,6 @@ export default function RandomEncounters () {
         switch (environment) {
             case 'urban': return <UrbanEnv/>
             case 'forest': return <ForestEnv/>
-            case 'swamp' : return <SwampEnv/>
             case 'tavern' : return <TavernEnv/>
             case 'seaTravel' : return <SeaTravelEnv/>
             case 'jungle' : return <JungleEnv/>
@@ -38,9 +35,8 @@ export default function RandomEncounters () {
                         <li onClick={() => setEnvironment('desert')}><Button label={'Desert'}/></li>
                         <li onClick={() => setEnvironment('urban')}><Button label={'Urban'}/></li>
                         <li onClick={() => setEnvironment('forest')}><Button label={'Forest'}/></li>
-                        <li onClick={() => setEnvironment('swamp')}><NAButton label={'Swamp'}/></li>
-                        <li onClick={() => setEnvironment('tavern')}><NAButton label={'Tavern'}/></li>
-                        <li onClick={() => setEnvironment('seaTravel')}><NAButton label={'Sea Travel'}/></li>
+                        <li onClick={() => setEnvironment('tavern')}><Button label={'Tavern'}/></li>
+                        <li onClick={() => setEnvironment('seaTravel')}><Button label={'Sea Travel'}/></li>
                         <li onClick={() => setEnvironment('jungle')}><Button label={'Jungle'}/></li>
                         <li onClick={() => setEnvironment('longRest')}><Button label={'Long Rest'}/></li>
                     </ul>
