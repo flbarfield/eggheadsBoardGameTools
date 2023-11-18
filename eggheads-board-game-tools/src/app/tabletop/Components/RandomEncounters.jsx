@@ -10,6 +10,7 @@ import JungleEnv from '@/app/tabletop/Components/jungleEnv'
 import LongRestEnv from '@/app/tabletop/Components/longRestEnv'
 import ForestEnv from '@/app/tabletop/Components/forestEnv'
 import NAButton from '../../../Components/NAButton'
+import DesertEnv from './DesertEnv'
 
 export default function RandomEncounters () {
     let [environment, setEnvironment] = useState('')
@@ -23,6 +24,7 @@ export default function RandomEncounters () {
             case 'seaTravel' : return <SeaTravelEnv/>
             case 'jungle' : return <JungleEnv/>
             case 'longRest' : return <LongRestEnv/>
+            case 'desert' : return <DesertEnv/>
             case '' : ''
         }
     }
@@ -33,12 +35,13 @@ export default function RandomEncounters () {
             <section className='mx-auto flex gap-5 flex-col'>
                 <span className='text-center'>Choose the environment.</span>
                     <ul className='flex flex-wrap gap-2'>
+                        <li onClick={() => setEnvironment('desert')}><Button label={'Desert'}/></li>
                         <li onClick={() => setEnvironment('urban')}><Button label={'Urban'}/></li>
                         <li onClick={() => setEnvironment('forest')}><Button label={'Forest'}/></li>
                         <li onClick={() => setEnvironment('swamp')}><NAButton label={'Swamp'}/></li>
                         <li onClick={() => setEnvironment('tavern')}><NAButton label={'Tavern'}/></li>
                         <li onClick={() => setEnvironment('seaTravel')}><NAButton label={'Sea Travel'}/></li>
-                        <li onClick={() => setEnvironment('jungle')}><NAButton label={'Jungle'}/></li>
+                        <li onClick={() => setEnvironment('jungle')}><Button label={'Jungle'}/></li>
                         <li onClick={() => setEnvironment('longRest')}><Button label={'Long Rest'}/></li>
                     </ul>
                     

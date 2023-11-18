@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         <nav> 
             <div>
-                <ul className="flex justify-between p-3 items-center font-medium mx-auto max-w-4xl">
+                <ul className="flex justify-between p-3 items-center mx-auto max-w-4xl">
                     <li>
                         <Link href='/'>
                             <div>
