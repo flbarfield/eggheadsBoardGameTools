@@ -14,3 +14,12 @@ h2 {
 span {
     @apply text-lg;
 }
+
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: aqua;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(218, 218, 219);
+}
