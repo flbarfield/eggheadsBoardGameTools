@@ -320,7 +320,7 @@ export default function DesertEnv () {
                 <Button label={'Roll the dice!'}/>
             </div>
             <p className="my-5">{diceRoll} <br /><br /> {encounter}</p>
-            <span className='text-center'>Entries gathered from DnDspeak.com: <a className="text-blue-400" href='https://www.dndspeak.com/2021/07/14/100-non-combat-urban-encounters/#google_vignette'>Here</a></span>
+            <span className='text-center'>Entries gathered from DnDspeak.com: <a className="text-blue-400" href='https://www.dndspeak.com/2018/01/03/100-desert-encounters/'>Here</a></span>
         </div>
     )
 }

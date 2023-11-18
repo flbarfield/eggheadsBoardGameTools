@@ -41,7 +41,7 @@ export default function RandomEncounters () {
                         <li onClick={() => setEnvironment('swamp')}><NAButton label={'Swamp'}/></li>
                         <li onClick={() => setEnvironment('tavern')}><NAButton label={'Tavern'}/></li>
                         <li onClick={() => setEnvironment('seaTravel')}><NAButton label={'Sea Travel'}/></li>
-                        <li onClick={() => setEnvironment('jungle')}><NAButton label={'Jungle'}/></li>
+                        <li onClick={() => setEnvironment('jungle')}><Button label={'Jungle'}/></li>
                         <li onClick={() => setEnvironment('longRest')}><Button label={'Long Rest'}/></li>
                     </ul>
                     
