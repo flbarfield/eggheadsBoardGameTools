@@ -12,9 +12,9 @@ const Navbar = () => {
     }
 
     return (
-        <nav> 
+        <nav className='bg-slate-100'> 
             <div>
-                <ul className="flex justify-between p-3 items-center mx-auto max-w-4xl">
+                <ul className="flex justify-around sm:justify-between p-3 items-center mx-auto max-w-4xl">
                     <li>
                         <Link href='/'>
                             <div>
@@ -22,14 +22,14 @@ const Navbar = () => {
                             </div>
                         </Link>
                     </li>
-                    <NavbarLink path='/tabletop' linkName='Tabletop RPGs'/>
-                    <li>
+                        <NavbarLink path='/tabletop' linkName='Tabletop RPGs'/>
+                    <li className='hidden sm:block'>
                         <span onClick={toggleNavLinks} className='hover:bg-EggheadBlue hover:text-white p-2 rounded-md cursor-pointer relative line-through text-slate-400'>Board Games</span>
                         <ul className='shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden absolute'>
                             <li className='text-red-500'>Not Yet Implemented.</li>
                         </ul>
                     </li>
-                    <li>
+                    <li className='hidden sm:block'>
                         <span onClick={toggleNavLinks} className='hover:bg-EggheadBlue hover:text-white p-2 rounded-md cursor-pointer relative line-through text-slate-400'>Miniatures</span>
                         <ul className='shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden absolute'>
                             <li className='text-red-500'>Not Yet Implemented</li>
