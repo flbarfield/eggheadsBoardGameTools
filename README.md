@@ -2,8 +2,7 @@
 
 # Demo Website: [Here](https://eggheads-board-game-tools.vercel.app/)
 
-![Egghead Site Still](https://res.cloudinary.com/dniwvymzt/image/upload/v1698929614/Portfolio/EggheadStill_emznlg.png)
-
+![Egghead Site Gif](https://res.cloudinary.com/dniwvymzt/image/upload/v1700426319/Portfolio/eggHead_e19a9b.gif)
 ---
 <h2>Summary</h2>
 Created for analog game enthusiasts, Egghead's Board Game Tools is created to make running games easier and more enjoyable! The application is in the early development phase, but it will include extensive data for Dungeons and Dragons to be used as quick references, as well as a combat initiative tracker that will allow you to add and delete monsters as well as timed environmental effects on the battlefield on the fly. The user will be able to track their list of board games thanks to data gathered from board game list APIs, which will also have a randomizer function for those times their board game groups simply can't pick what game they want to play next. For miniatures, I would like to implement a way to take pictures of terrain and specific miniatures, and the app will return other buyable pieces that match said terrain and miniatures in order to complete a whole set or simply see where the original came from. <br/><br/>
