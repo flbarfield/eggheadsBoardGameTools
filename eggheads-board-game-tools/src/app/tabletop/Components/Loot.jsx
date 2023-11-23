@@ -4,6 +4,8 @@ import Button from '@/Components/Button'
 import NAButton from '@/Components/NAButton'
 import { useState } from 'react'
 import PickpocketLoot from './PickpocketLoot'
+import InduvidualTreasure from './IndividualTreasure'
+import TreasureHoard from './TreasureHoard'
 
 export default function Loot () {
     let [lootType, setLootType] = useState('')
@@ -12,6 +14,8 @@ export default function Loot () {
         switch (lootType) {
             case '': return ''
             case 'pickpocket': return <PickpocketLoot/>
+            case 'individualTreasure': return <InduvidualTreasure/>
+            case 'treasureHoard': return <TreasureHoard/>
         }
     }
     
@@ -22,18 +26,9 @@ export default function Loot () {
                 <Image className='rounded-md mx-auto' src={LootImg} height={350} placeholder='blur' alt="Treasure box" />
                 <ul className='flex flex-wrap gap-2'>
                     <li onClick={()=>setLootType('pickpocket')}><Button label={'Pickpocket Loot'}/></li>
-                    <li><NAButton label={'Individual Treasure CR 0-4'}/></li>
-                    <li><NAButton label={'Individual Treasure CR 5-10'}/></li>
-                    <li><NAButton label={'Individual Treasure CR 11-16'}/></li>
-                    <li><NAButton label={'Individual Treasure CR 17+'}/></li>
-
+                    <li onClick={()=>setLootType('individualTreasure')}><Button label={'Individual Treasure'}/></li>
+                    <li onClick={()=>setLootType('treasureHoard')}><NAButton label={'Treasure Hoard'}/></li>
                 </ul>
-                <ul className='flex flex-wrap gap-2 mt-5'>
-                    <li><NAButton label={'Treasure Hoard CR 0-4'}/></li>
-                    <li><NAButton label={'Treasure Hoard CR 5-10'}/></li>
-                    <li><NAButton label={'Treasure Hoard CR 11-16'}/></li>
-                    <li><NAButton label={'Treasure Hoard CR 17+'}/></li>
-                </ul>   
                 {generateLootButtons()}
         </section>
     )
