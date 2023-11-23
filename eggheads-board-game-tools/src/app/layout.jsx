@@ -11,6 +11,7 @@ export const metadata = {
   description: 'The one stop shop for all your game-aid needs!',
 }
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
