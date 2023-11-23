@@ -3,7 +3,7 @@ import LootImg from '../../../../public/Images/treasure.webp'
 import Button from '@/Components/Button'
 import NAButton from '@/Components/NAButton'
 import { useState } from 'react'
-import PickpocketLoot from './PickPocketLoot'
+import PickpocketLoot from './PickpocketLoot'
 
 export default function Loot () {
     let [lootType, setLootType] = useState('')
