@@ -109,7 +109,7 @@ export default function DMsTools () {
                 <h1>Randomizers:</h1>
                     <ul className='flex gap-5 flex-wrap mt-5'>
                         <li onClick={() => setActiveSelection('dungeonDoors')}><Button label={'Dungeon Doors'}/></li>
-                        <li onClick={() => setActiveSelection('loot')}><NAButton label={'Loot'}/></li>
+                        <li onClick={() => setActiveSelection('loot')}><Button label={'Loot'}/></li>
                         <li onClick={() => setActiveSelection('nameGen')}><NAButton label={'Name Generators'}/></li>
                         <li onClick={() => setActiveSelection('randomEncounters')}><Button label={'Random Encounters'}/></li>
                         <li onClick={() => setActiveSelection('quickMaps')}><NAButton label={'Quick Maps'}/></li>

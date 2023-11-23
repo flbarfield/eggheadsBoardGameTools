@@ -1,6 +1,7 @@
 import Button from "./Button";
 
 
+
 export default function Footer () {
     return (
         <footer className="bg-EggheadBlue py-10 text-white mt-auto">
