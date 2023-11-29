@@ -1,17 +1,11 @@
 import Button from "@/Components/Button"
-// import d3 from 'd3'
+import d3 from 'd3'
 import { useState } from "react"
 
 
 export default function InduvidualTreasure () {
-    // let [treasure, setTreasure] = useState('')
-
-    // async function generateData (req, res) {
-    //     res = await d3.csv('../../lib/treasure.csv').row(function(d) { return {key: d.key, value: +d.value}; })
-    //     .get(function(error, rows) { console.log(rows); });
+    let [treasure, setTreasure] = useState('')
     
-    //     setTreasure(res)
-    // } 
 
     return(
         <div>
@@ -22,7 +16,7 @@ export default function InduvidualTreasure () {
                 <li><Button label={'CR 11-16'}/></li>
                 <li><Button label={'CR 17+'}/></li>
             </ul>
-            {/* {treasure} */}
+            {treasure}
         </div>
     )
 }
