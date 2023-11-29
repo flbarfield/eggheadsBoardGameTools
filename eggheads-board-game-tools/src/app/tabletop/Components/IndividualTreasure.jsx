@@ -1,9 +1,8 @@
 import Button from "@/Components/Button"
-import d3 from 'd3'
 import { useState } from "react"
 
 
-export default function InduvidualTreasure () {
+export default function IndividualTreasure () {
     let [treasure, setTreasure] = useState('')
     
 

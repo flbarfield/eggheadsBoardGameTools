@@ -4,7 +4,7 @@ import Button from '@/Components/Button'
 import NAButton from '@/Components/NAButton'
 import { useState } from 'react'
 import PickpocketLoot from './PickpocketLoot'
-import InduvidualTreasure from './IndividualTreasure'
+import IndividualTreasure from './IndividualTreasure'
 import TreasureHoard from './TreasureHoard'
 
 export default function Loot () {
@@ -14,7 +14,7 @@ export default function Loot () {
         switch (lootType) {
             case '': return ''
             case 'pickpocket': return <PickpocketLoot/>
-            case 'individualTreasure': return <InduvidualTreasure/>
+            case 'individualTreasure': return <IndividualTreasure/>
             case 'treasureHoard': return <TreasureHoard/>
         }
     }
