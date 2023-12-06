@@ -40,7 +40,7 @@ export default function NameGen () {
 //   });
   
 //   // Append the file input to the document body or another DOM element
-//   document.body.appendChild(fileInput);
+// //   document.body.appendChild(fileInput);
   
       
 
